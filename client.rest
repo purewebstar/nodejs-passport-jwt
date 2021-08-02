@@ -1,0 +1,26 @@
+// Create user account first
+POST http://localhost:4000/api/create-user
+Content-Type: application/json
+
+{
+    "fullName": "Abraham Mitiku",
+    "email": "abraham@gmail.com",
+    "password": "123"
+}
+
+###
+// login user account
+POST http://localhost:4000/api/read-user
+Content-Type: application/json
+
+{
+    "email": "abraham@gmail.com",
+    "password": "123"
+}
+
+// ---------------  Authorized end point -------------------
+// get user info / data
+###
+GET http://localhost:4000/api/read-user-info
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFicmFoYW1AZ21haWwuY29tIiwiaWF0IjoxNjI3OTI3NzI2LCJleHAiOjE2Mjc5Mjc5MDZ9.zDNUcCVFWP1izirdD4yTbpYKZHqkCYfxlymFcmfW2kY
